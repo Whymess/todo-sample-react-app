@@ -1,0 +1,20 @@
+.btn-secondary {
+    float: right;
+    border-radius: 8em;
+}
+
+
+.add-image {
+    right: 4px;
+    position: relative;
+    bottom: 1px;
+}
+
+
+
+.btn-light {
+    width: 20%;
+    margin-top: 1em;
+} 
+
+    

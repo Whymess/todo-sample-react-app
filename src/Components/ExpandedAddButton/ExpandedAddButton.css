@@ -1,0 +1,7 @@
+.add-button-rendered {
+	border: 1px solid;
+	height: 10em;
+	    display: flex;
+    flex-direction: column;
+	background-color: grey;
+}

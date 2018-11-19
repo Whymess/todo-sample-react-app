@@ -1,0 +1,17 @@
+.card {
+	width: 30rem;
+    position: relative;
+    margin: 0 auto;
+    top: 1em;
+    min-height: 30rem;
+    display: flex;
+}
+
+.container-for-count {
+	position: relative;
+    left: 1em;
+    font-size: 1.3em;
+}
+
+
+ 
