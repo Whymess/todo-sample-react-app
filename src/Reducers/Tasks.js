@@ -1,5 +1,5 @@
 import uuidv4 from "uuid/v4";
-import compare from '../Helpers/'
+import { compare, compareDates } from "../Helpers/";
 import {
   COMPLETE_TASK,
   SORT_TASK_DATE,
@@ -32,11 +32,7 @@ export default (state = inital_todo_state, action) => {
     case SORT_TASK_DATE:
       copyOfStateHandler = [...state.tasks_stack];
 
-      result = copyOfStateHandler.sort((a, b) => {
-        a = a.date.split("-").join("");
-        b = b.date.split("-").join("");
-        return a > b ? 1 : a < b ? -1 : 0;
-      });
+      result = copyOfStateHandler.sort(compareDates);
 
       return {
         ...state,
@@ -46,7 +42,7 @@ export default (state = inital_todo_state, action) => {
     case SORT_TASK_NAME:
       copyOfStateHandler = [...state.tasks_stack];
 
-      result =  copyOfStateHandler.sort(compare)
+      result = copyOfStateHandler.sort(compare);
 
       return {
         ...state,

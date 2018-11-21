@@ -11,5 +11,12 @@ const compare = (a, b) => {
   return comparison;
 }
 
-export default compare;
+
+const compareDates = (a, b) => {
+        a = a.date.split("-").join("");
+        b = b.date.split("-").join("");
+        return a > b ? 1 : a < b ? -1 : 0;
+      }
+
+export  {compare, compareDates};
 
