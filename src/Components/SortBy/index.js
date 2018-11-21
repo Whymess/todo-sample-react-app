@@ -29,20 +29,8 @@ export default class SortBy extends Component {
     return (
       <div className="p-2 ml-auto mt-2">
         Sort by:
-        {DateSortActive ? (
-          <span>
-            <strong> Date </strong>
-          </span>
-        ) : (
-          <span> Date </span>
-        )}
-        {TextSortActive ? (
-          <span>
-            <strong> Text </strong>
-          </span>
-        ) : (
-          <span> Text </span>
-        )}
+        {DateSortActive ? <strong> Date </strong> : <span> Date </span>}
+        {TextSortActive ? <strong> Text </strong> : <span> Text </span>}
         <img
           onClick={() => this.showActiveSort("Date")}
           alt=""

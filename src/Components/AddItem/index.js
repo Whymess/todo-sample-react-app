@@ -13,6 +13,7 @@ export default class AddItem extends Component {
   switchRenderedState = () => {
     let { task, date } = this.state;
     let { ADD_TASK } = this.props;
+
     this.setState(prevState => ({
       renderAddButton: !prevState.renderAddButton,
       task: "",
