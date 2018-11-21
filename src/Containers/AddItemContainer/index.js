@@ -2,9 +2,9 @@ import { connect } from "react-redux";
 import React from "react";
 import { bindActionCreators } from "redux";
 
-import {ADD_TASK} from '../../Actions/'
+import { ADD_TASK } from "../../Actions/";
 
-import { AddItem} from "../../Components/";
+import { AddItem } from "../../Components/";
 
 const AddItemContainer = props => {
   return <AddItem {...props} />;
@@ -16,9 +16,13 @@ const mapStateToProps = state => {
   };
 };
 
-const mapDispatchToProps = dispatch => bindActionCreators({
-	ADD_TASK: ADD_TASK
-}, dispatch);
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(
+    {
+      ADD_TASK: ADD_TASK
+    },
+    dispatch
+  );
 
 export default connect(
   mapStateToProps,
