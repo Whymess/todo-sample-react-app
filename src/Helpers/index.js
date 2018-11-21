@@ -1,4 +1,4 @@
-export default function compare(a, b) {
+const compare = (a, b) => {
   const titleOne = a.title.toUpperCase();
   const titleTwo = b.title.toUpperCase();
 
@@ -10,4 +10,6 @@ export default function compare(a, b) {
   }
   return comparison;
 }
+
+export default compare;
 
