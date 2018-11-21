@@ -30,6 +30,7 @@ export default class ExpandedAddButton extends Component {
         >
           Add
         </button>
+        <div style={{textAlign: 'center', color: 'firebrick'}}> All fields are required </div>
       </div>
     );
   }

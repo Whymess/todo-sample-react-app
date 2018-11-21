@@ -7,7 +7,7 @@ import {
   ADD_TASK
 } from "../Constants/";
 
-var inital_todo_state = {
+let inital_todo_state = {
   tasks_stack: []
 };
 
@@ -32,7 +32,7 @@ export default (state = inital_todo_state, action) => {
     case SORT_TASK_DATE:
       copyOfStateHandler = [...state.tasks_stack];
 
-      result = copyOfStateHandler.sort(function(a, b) {
+      result = copyOfStateHandler.sort((a, b) => {
         a = a.date.split("-").join("");
         b = b.date.split("-").join("");
         return a > b ? 1 : a < b ? -1 : 0;
@@ -51,7 +51,7 @@ export default (state = inital_todo_state, action) => {
       );
       return {
         ...state,
-        tasks_stack: result
+        tasks_stack: result.reverse()
       };
 
     case ADD_TASK:
