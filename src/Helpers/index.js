@@ -9,14 +9,12 @@ const compare = (a, b) => {
     comparison = -1;
   }
   return comparison;
-}
-
+};
 
 const compareDates = (a, b) => {
-        a = a.date.split("-").join("");
-        b = b.date.split("-").join("");
-        return a > b ? 1 : a < b ? -1 : 0;
-      }
+  a = a.date.split("-").join("");
+  b = b.date.split("-").join("");
+  return a > b ? 1 : a < b ? -1 : 0;
+};
 
-export  {compare, compareDates};
-
+export { compare, compareDates };
