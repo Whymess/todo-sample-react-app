@@ -1,5 +1,5 @@
 import uuidv4 from "uuid/v4";
-
+import compare from '../Helpers/'
 import {
   COMPLETE_TASK,
   SORT_TASK_DATE,
@@ -46,12 +46,11 @@ export default (state = inital_todo_state, action) => {
     case SORT_TASK_NAME:
       copyOfStateHandler = [...state.tasks_stack];
 
-      result = copyOfStateHandler.sort((a, b) =>
-        a.title > b.title ? 1 : b.title > a.title ? -1 : 0
-      );
+      result =  copyOfStateHandler.sort(compare)
+
       return {
         ...state,
-        tasks_stack: result.reverse()
+        tasks_stack: result
       };
 
     case ADD_TASK:
