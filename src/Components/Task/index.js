@@ -8,7 +8,6 @@ export default class Task extends Component {
     return (
       <div className="Task d-flex mt-2">
          <img
-            onClick={this.toogleButton}
             className="p-2"
             alt=""
             src={require("../../Assets/Icons/baseline-drag_indicator-24px.svg")}

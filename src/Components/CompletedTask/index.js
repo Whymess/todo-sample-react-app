@@ -7,7 +7,6 @@ export default class CompletedTask extends Component {
     return (
       <span className="done-task d-flex">
         <img
-          onClick={this.toogleButton}
           className="p-2"
           alt=""
           src={require("../../Assets/Icons/baseline-check_circle-24px.svg")}
